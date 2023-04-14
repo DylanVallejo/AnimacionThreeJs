@@ -23,11 +23,20 @@ import {
 } from "webgi";
 import gsap from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
+import { scrollAnimation } from '../lib/scroll-animation';
 
 function WebgiViewer() {
     
     const canvasRef = useRef(null);
+    
+    
+    const memorizedScrollAnimation = useCallback(
+        (position,target,onUpdate) => { 
+            if(position && target &&  onUpdate){
+                scrollAnimation(position,target,onUpdate)
+            }
+        }, []
+    )
     
     
     const setupViewer = useCallback(async () => {
