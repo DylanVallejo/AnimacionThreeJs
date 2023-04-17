@@ -87,6 +87,11 @@ function WebgiViewer() {
             
             let needsUpdate = true;
             
+            const onUpdate  = () => {
+                needsUpdate = true;
+                viewer.setDirty();
+            }
+        // }
             viewer.addEventListener("preFrame", () => {
                 if(needsUpdate){
                     
@@ -94,13 +99,9 @@ function WebgiViewer() {
                     needsUpdate = false
                 }
             })
+            
+            memorizedScrollAnimation(position,target,onUpdate)
         
-            // Load an environment map if not set in the glb file
-            // await viewer.scene.setEnvironment(
-            //     await manager.importer!.importSinglePath<ITexture>(
-            //         "./assets/environment.hdr"
-            //     )
-            // );
         
         }
     },[] );
