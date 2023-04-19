@@ -8,7 +8,9 @@ export const scrollAnimation = (positon, target, onUpdate) => {
     // defining properties to animate
     tl.to(positon,{
         scrollTrigger: {
-            trigger: '.sound-section'
+            trigger: '.sound-section',
+            star: "top bottom",
+            end: "top top"
         }
     })
     
