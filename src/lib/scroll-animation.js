@@ -91,7 +91,7 @@ export const scrollAnimation = (positon, target, onUpdate) => {
             immediateRender: false
         } ,
 
-    })
+    }) 
     
     
 }
