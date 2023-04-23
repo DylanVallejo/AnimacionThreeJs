@@ -92,6 +92,19 @@ export const scrollAnimation = (positon, target, onUpdate) => {
         } ,
 
     }) 
+    .to('.display-section',{
+        // values to change 
+        opacity:1,
+        scrollTrigger: {
+            trigger: '.display-section',
+            star: "top bottom",
+            end: "top top",
+            scrub: 2,
+            // upgrading performance
+            immediateRender: false
+        } ,
+
+    })
     
     
 }
