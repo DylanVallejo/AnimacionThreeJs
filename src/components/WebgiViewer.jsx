@@ -84,7 +84,7 @@ const  WebgiViewer = forwardRef((props,ref) => {
             
                 const camera = viewer.scene.activeCamera;
                 const position = camera.position;
-                const target = camera.target;
+                const target = camera.target; 
                 
                 
                 setCameraRef(camera);
