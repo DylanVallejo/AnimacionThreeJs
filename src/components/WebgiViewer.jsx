@@ -135,7 +135,7 @@ const  WebgiViewer = forwardRef((props,ref) => {
                     }
                 })
                 
-                memorizedScrollAnimation(position,target,onUpdate)
+                memorizedScrollAnimation(position,target,onUpdate) 
             
             
             }
